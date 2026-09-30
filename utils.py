@@ -15,9 +15,9 @@ from model_config import validate_precision
 REPO_ROOT = Path(__file__).resolve().parent
 
 # Student-facing configuration. Most students only edit these three lines.
-CONFIG_MODAL_ENVIRONMENT = "YOUR_MODAL_ENVIRONMENT"
-CONFIG_WANDB_ENTITY = "YOUR_WANDB_USERNAME_OR_TEAM"
-CONFIG_WANDB_PROJECT = "assignments"
+CONFIG_MODAL_ENVIRONMENT = "main"
+CONFIG_WANDB_ENTITY = "lzq666amn-github"
+CONFIG_WANDB_PROJECT = "cs312-assignments"
 
 # Non-Modal users only: advanced local path overrides.
 # Leave these as None to use the default local directories.
@@ -26,7 +26,7 @@ CONFIG_MODEL_DIR = None
 CONFIG_DATA_DIR = None
 
 # Instructors usually leave these alone.
-CONFIG_MODAL_WANDB_SECRET = "dl-alchemy-wandb"
+CONFIG_MODAL_WANDB_SECRET = "wandb-secret"
 CONFIG_MODAL_APP_NAME = "dl_alchemy"
 CONFIG_MODAL_VOLUME_NAME = None
 
