@@ -26,6 +26,7 @@ image = (
         "requests",
         "sentencepiece",
         "torch==2.6.0",
+        "triton==3.2.0",
         "tqdm",
         "wandb==0.17.3",
     )
@@ -65,6 +66,19 @@ def download_dataset(force: bool = False):
     print(f"Data directory: {result['data_dir']}")
     print(f"Repository: {result['repo_id']}")
     print(f"Revision: {result['revision']}")
+
+
+    import torch
+
+    print("torch:", torch.__version__)
+    print("cuda:", torch.version.cuda)
+
+    try:
+        import triton
+        print("triton:", triton.__version__)
+        print("triton path:", triton.__file__)
+    except Exception as e:
+        print("TRITON ERROR:", repr(e))
 
     return result
 
