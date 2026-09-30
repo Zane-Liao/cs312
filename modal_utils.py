@@ -10,9 +10,9 @@ from utils import (
 )
 
 
-DEFAULT_SHARED_DATA_ENVIRONMENT = "cs312-shared-data"
-DEFAULT_SHARED_DATA_VOLUME_NAME = "hard-dl-dclm-v1"
-DEFAULT_WANDB_SECRET_NAME = "dl-alchemy-wandb"
+DEFAULT_SHARED_DATA_ENVIRONMENT = "main"
+DEFAULT_SHARED_DATA_VOLUME_NAME = "cs312-data"
+DEFAULT_WANDB_SECRET_NAME = "wandb-secret"
 
 
 def _configured_modal_environment():
@@ -108,7 +108,7 @@ shared_data_volume = modal.Volume.from_name(
     SHARED_DATA_VOLUME_NAME,
     create_if_missing=False,
     environment_name=MODAL_SHARED_DATA_ENVIRONMENT,
-    version=2,
+    version=1,
 )
 
 
